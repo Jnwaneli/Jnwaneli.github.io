@@ -1,0 +1,706 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portfolio of Joshua Nwaneli, a computer engineer focused on embedded systems, firmware, telemetry, and hardware-software integration."
+    />
+    <meta name="theme-color" content="#07100d" />
+    <meta property="og:title" content="Joshua Nwaneli | Embedded Systems & Firmware" />
+    <meta
+      property="og:description"
+      content="Embedded systems, firmware, CAN telemetry, Formula SAE electronics, and engineering research."
+    />
+    <meta property="og:type" content="website" />
+    <title>Joshua Nwaneli | Embedded Systems & Firmware</title>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script type="module" src="/script.js"></script>
+  </head>
+
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <div class="site-noise" aria-hidden="true"></div>
+    <div class="cursor-glow" aria-hidden="true"></div>
+
+    <header class="site-header" id="top">
+      <a class="brand" href="#top" aria-label="Joshua Nwaneli, home">
+        <span class="brand-mark">JN</span>
+        <span class="brand-name">JOSHUA NWANELI</span>
+      </a>
+
+      <button class="menu-button" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span class="sr-only">Open navigation</span>
+      </button>
+
+      <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+        <a href="#work">Work</a>
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact" class="nav-cta">Let's talk <span aria-hidden="true">↗</span></a>
+      </nav>
+    </header>
+
+    <main id="main-content">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-grid" aria-hidden="true"></div>
+        <div class="hero-copy">
+          <div class="eyebrow reveal">
+            <span class="status-dot"></span>
+            Computer Engineer · Fort Worth, TX
+          </div>
+
+          <h1 id="hero-title" class="reveal">
+            I build systems where
+            <span class="hero-accent">hardware meets</span>
+            <span class="hero-outline">intelligent code.</span>
+          </h1>
+
+          <p class="hero-intro reveal">
+            I'm Joshua—an embedded systems and firmware engineer working across
+            microcontrollers, CAN networks, PCB design, and real-time telemetry.
+          </p>
+
+          <div class="hero-actions reveal">
+            <a class="button button-primary" href="#work">
+              Explore my work
+              <span class="button-arrow" aria-hidden="true">↓</span>
+            </a>
+            <a
+              class="text-link"
+              href="https://www.linkedin.com/in/joshua-nwaneli-911019308"
+              target="_blank"
+              rel="noreferrer"
+            >
+              LinkedIn <span aria-hidden="true">↗</span>
+            </a>
+            <a
+              class="text-link"
+              href="https://github.com/Jnwaneli"
+              target="_blank"
+              rel="noreferrer"
+            >
+              GitHub <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-system reveal" aria-label="Animated embedded system diagram">
+          <div class="system-label system-label-top">
+            <span>LIVE SYSTEM</span>
+            <span class="system-clock">00:00:00</span>
+          </div>
+
+          <div class="board-shell">
+            <span class="board-corner corner-tl"></span>
+            <span class="board-corner corner-tr"></span>
+            <span class="board-corner corner-bl"></span>
+            <span class="board-corner corner-br"></span>
+
+            <div class="trace trace-a"></div>
+            <div class="trace trace-b"></div>
+            <div class="trace trace-c"></div>
+            <div class="trace trace-d"></div>
+            <div class="trace trace-e"></div>
+
+            <div class="chip">
+              <span class="chip-pin pin-1"></span>
+              <span class="chip-pin pin-2"></span>
+              <span class="chip-pin pin-3"></span>
+              <span class="chip-pin pin-4"></span>
+              <span class="chip-pin pin-5"></span>
+              <span class="chip-pin pin-6"></span>
+              <span class="chip-title">STM32</span>
+              <span class="chip-subtitle">ARM CORTEX-M</span>
+              <span class="chip-pulse"></span>
+            </div>
+
+            <div class="node node-can"><span>CAN</span><small>500k</small></div>
+            <div class="node node-power"><span>PWR</span><small>3V3</small></div>
+            <div class="node node-sensor"><span>I/O</span><small>SENS</small></div>
+            <div class="signal signal-1"></div>
+            <div class="signal signal-2"></div>
+            <div class="signal signal-3"></div>
+          </div>
+
+          <div class="system-readout">
+            <div><span>BUS</span><strong>ONLINE</strong></div>
+            <div><span>PACKETS</span><strong class="packet-count">12,840</strong></div>
+            <div><span>STATUS</span><strong>NOMINAL</strong></div>
+          </div>
+        </div>
+
+        <a class="scroll-cue" href="#work" aria-label="Scroll to selected work">
+          <span>SCROLL TO EXPLORE</span>
+          <span class="scroll-line"></span>
+        </a>
+      </section>
+
+      <section class="marquee" aria-label="Areas of expertise">
+        <div class="marquee-track">
+          <span>EMBEDDED SYSTEMS</span><i></i>
+          <span>FIRMWARE</span><i></i>
+          <span>CAN BUS</span><i></i>
+          <span>PCB DESIGN</span><i></i>
+          <span>C / C++</span><i></i>
+          <span>HARDWARE–SOFTWARE INTEGRATION</span><i></i>
+          <span aria-hidden="true">EMBEDDED SYSTEMS</span><i aria-hidden="true"></i>
+          <span aria-hidden="true">FIRMWARE</span><i aria-hidden="true"></i>
+          <span aria-hidden="true">CAN BUS</span><i aria-hidden="true"></i>
+          <span aria-hidden="true">PCB DESIGN</span><i aria-hidden="true"></i>
+        </div>
+      </section>
+
+      <section class="section work-section" id="work" aria-labelledby="work-title">
+        <div class="section-heading reveal">
+          <div>
+            <p class="section-kicker">01 / SELECTED WORK</p>
+            <h2 id="work-title">Engineering in motion.</h2>
+          </div>
+          <p class="section-summary">
+            Projects built around real signals, physical constraints, and the
+            decisions that connect software to hardware.
+          </p>
+        </div>
+
+        <div class="project-list">
+          <article class="project project-featured reveal">
+            <div class="project-visual telemetry-visual" aria-hidden="true">
+              <div class="visual-topbar">
+                <span>TELEMETRY://LIVE</span>
+                <span>0x100</span>
+              </div>
+              <div class="telemetry-layout">
+                <div class="gauge">
+                  <svg viewBox="0 0 220 135" role="presentation">
+                    <path class="gauge-track" d="M25 115 A85 85 0 0 1 195 115" />
+                    <path class="gauge-value" d="M25 115 A85 85 0 0 1 176 63" />
+                  </svg>
+                  <div class="gauge-number"><strong>12.6</strong><span>V</span></div>
+                </div>
+                <div class="telemetry-stats">
+                  <div><span>TEMP</span><strong>34.5°C</strong></div>
+                  <div><span>RPM</span><strong>8,420</strong></div>
+                  <div><span>FRAME</span><strong>VALID</strong></div>
+                </div>
+              </div>
+              <div class="data-stream">
+                <span>08</span><span>10</span><span>00</span><span>FF</span><span>0A</span><span>01</span><span>05</span><span class="stream-active">A4</span>
+              </div>
+            </div>
+
+            <div class="project-copy">
+              <div class="project-number">001</div>
+              <p class="project-type">EMBEDDED SOFTWARE · FEATURED</p>
+              <h3>CAN Telemetry Decoder</h3>
+              <p>
+                A C++ telemetry pipeline that validates CAN frames, decodes raw
+                payloads into scaled engineering values, and buffers incoming
+                vehicle data through a reusable circular buffer architecture.
+              </p>
+              <ul class="tag-list" aria-label="Technologies used">
+                <li>C++</li>
+                <li>CAN Bus</li>
+                <li>Data Structures</li>
+                <li>Embedded Architecture</li>
+              </ul>
+              <div class="project-detail-grid">
+                <div><span>FOCUS</span><strong>Reliable data flow</strong></div>
+                <div><span>OUTPUT</span><strong>Scaled telemetry</strong></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="project reveal">
+            <figure class="project-visual github-visual fsae-photo-visual">
+              <div class="visual-topbar">
+                <span>FSAE://ELECTRICAL</span>
+                <span>GSX-R600</span>
+              </div>
+              <img
+                class="github-main-image"
+                src="https://raw.githubusercontent.com/Jnwaneli/fsae-electrical-systems-portfolio/main/assets/selected_report_excerpts/team_or_car_photo.png"
+                alt="ORU Formula SAE Project Lazarus team and race car"
+                loading="lazy"
+                decoding="async"
+              />
+              <div class="github-inset github-inset-light">
+                <span>HARNESS MAPOUT</span>
+                <img
+                  src="https://raw.githubusercontent.com/Jnwaneli/fsae-electrical-systems-portfolio/main/assets/selected_report_excerpts/final_harness_mapout.png"
+                  alt="Formula SAE final electrical harness mapout"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <figcaption>Project Lazarus · ORU Formula SAE 2026</figcaption>
+            </figure>
+
+            <div class="project-copy">
+              <div class="project-number">002</div>
+              <p class="project-type">FORMULA SAE · TEAM SYSTEM</p>
+              <h3>FSAE Vehicle Electronics</h3>
+              <p>
+                Electrical and control-system development for an ICE Formula SAE
+                car, including paddle-shift actuation, ignition-circuit redesign,
+                ECU integration, vehicle wiring, sensors, and telemetry planning.
+              </p>
+              <ul class="tag-list" aria-label="Technologies used">
+                <li>Vehicle Electronics</li>
+                <li>Arduino</li>
+                <li>H-Bridge</li>
+                <li>System Integration</li>
+              </ul>
+              <div class="project-detail-grid">
+                <div><span>PRIMARY ROLE</span><strong>Paddle-shift control</strong></div>
+                <div><span>PLATFORM</span><strong>Suzuki GSX-R600</strong></div>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/Jnwaneli/fsae-electrical-systems-portfolio" target="_blank" rel="noreferrer">
+                  View repository <span aria-hidden="true">↗</span>
+                </a>
+                <a href="https://oruracing.com" target="_blank" rel="noreferrer">
+                  Team site <span aria-hidden="true">↗</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project reveal">
+            <figure class="project-visual github-visual pcb-photo-visual">
+              <div class="visual-topbar">
+                <span>PCB://REV_A</span>
+                <span>DRC · 0 VIOLATIONS</span>
+              </div>
+              <img
+                class="github-main-image contain-image"
+                src="https://raw.githubusercontent.com/Jnwaneli/stm32-can-telemetry-node/main/Portfolio_Images/STM32_CAN_Telemetry_Node_3D_Angled.png"
+                alt="3D render of the STM32 CAN Telemetry Node Rev A PCB"
+                loading="lazy"
+                decoding="async"
+              />
+              <div class="github-inset pcb-inset">
+                <span>TOP LAYOUT</span>
+                <img
+                  src="https://raw.githubusercontent.com/Jnwaneli/stm32-can-telemetry-node/main/Portfolio_Images/STM32_CAN_Telemetry_Node_Top_2D.png"
+                  alt="Top-side PCB layout for the STM32 telemetry board"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div class="visual-proof"><strong>90 × 67</strong><span>MM PCB</span></div>
+              <figcaption>Altium Designer · Manufacturing package complete</figcaption>
+            </figure>
+
+            <div class="project-copy">
+              <div class="project-number">003</div>
+              <p class="project-type">PCB DESIGN · HARDWARE</p>
+              <h3>STM32 CAN Telemetry Board</h3>
+              <p>
+                A custom STM32F103 telemetry PCB designed and routed in Altium,
+                combining protected 12 V power, regulated 5 V and 3.3 V rails,
+                conditioned sensor inputs, CAN communication, SWD, and debug access.
+              </p>
+              <ul class="tag-list" aria-label="Technologies used">
+                <li>Altium Designer</li>
+                <li>STM32</li>
+                <li>Power Design</li>
+                <li>CAN Transceiver</li>
+              </ul>
+              <div class="project-detail-grid">
+                <div><span>RESULT</span><strong>DRC clean · 0 unrouted</strong></div>
+                <div><span>OUTPUT</span><strong>Manufacturing files</strong></div>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/Jnwaneli/stm32-can-telemetry-node" target="_blank" rel="noreferrer">
+                  View repository <span aria-hidden="true">↗</span>
+                </a>
+                <a href="https://github.com/Jnwaneli/stm32-can-telemetry-node/blob/main/Docs/Design_Report.pdf" target="_blank" rel="noreferrer">
+                  Design report <span aria-hidden="true">↗</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project reveal">
+            <div class="project-visual research-visual" aria-hidden="true">
+              <div class="visual-topbar">
+                <span>RESEARCH://FNN</span>
+                <span>TITAN HPC</span>
+              </div>
+              <div class="network">
+                <div class="network-layer layer-input">
+                  <i></i><i></i><i></i><i></i><i></i>
+                </div>
+                <div class="network-lines lines-a"></div>
+                <div class="network-layer layer-hidden-a">
+                  <i></i><i></i><i></i><i></i><i></i><i></i>
+                </div>
+                <div class="network-lines lines-b"></div>
+                <div class="network-layer layer-hidden-b">
+                  <i></i><i></i><i></i><i></i>
+                </div>
+                <div class="network-lines lines-c"></div>
+                <div class="network-layer layer-output"><i></i><i></i></div>
+              </div>
+              <div class="research-metrics">
+                <div><span>PARAMETERS</span><strong>1.33M</strong></div>
+                <div><span>TRAINING</span><strong>500 EPOCHS</strong></div>
+                <div><span>STACK</span><strong>TF + CUDA</strong></div>
+              </div>
+            </div>
+
+            <div class="project-copy">
+              <div class="project-number">004</div>
+              <p class="project-type">ENGINEERING RESEARCH · MACHINE LEARNING</p>
+              <h3>Wireless Channel Modeling</h3>
+              <p>
+                Deep-learning research with Dr. Xiaomin Ma using a feedforward
+                neural network to model wireless communication channels with
+                fading, trained on ORU's Titan high-performance computing system.
+              </p>
+              <ul class="tag-list" aria-label="Technologies used">
+                <li>Python</li>
+                <li>TensorFlow</li>
+                <li>CUDA</li>
+                <li>SLURM</li>
+              </ul>
+              <div class="project-detail-grid">
+                <div><span>COMPUTE</span><strong>GPU / Titan HPC</strong></div>
+                <div><span>METRICS</span><strong>MSE + RMSE</strong></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="project reveal">
+            <figure class="project-visual github-visual control-photo-visual">
+              <div class="visual-topbar">
+                <span>CONTROL://PHASE_LEAD</span>
+                <span>PO · 9.98%</span>
+              </div>
+              <img
+                class="github-main-image contain-image"
+                src="https://raw.githubusercontent.com/Jnwaneli/control-systems-phase-lead-compensator/main/assets/control_systems_figures/figure_08_compensated_step_response.png"
+                alt="MATLAB compensated step response for the phase-lead controller"
+                loading="lazy"
+                decoding="async"
+              />
+              <div class="github-inset hardware-inset">
+                <span>HARDWARE</span>
+                <img
+                  src="https://raw.githubusercontent.com/Jnwaneli/control-systems-phase-lead-compensator/main/assets/control_systems_figures/figure_15_breadboard.png"
+                  alt="Breadboard implementation of the analog control system"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div class="visual-proof control-proof"><strong>0.128</strong><span>SEC SETTLING</span></div>
+              <figcaption>MATLAB → Simulink → analog hardware</figcaption>
+            </figure>
+
+            <div class="project-copy">
+              <div class="project-number">005</div>
+              <p class="project-type">CONTROL SYSTEMS · ANALOG HARDWARE</p>
+              <h3>Phase-Lead Compensator</h3>
+              <p>
+                A classical controller taken from third-order plant modeling and
+                root-locus design through MATLAB, Simulink, practical component
+                selection, breadboard implementation, and oscilloscope verification.
+              </p>
+              <ul class="tag-list" aria-label="Technologies used">
+                <li>MATLAB</li>
+                <li>Simulink</li>
+                <li>Root Locus</li>
+                <li>Op-Amps</li>
+              </ul>
+              <div class="project-detail-grid">
+                <div><span>OVERSHOOT</span><strong>59.86% → 9.98%</strong></div>
+                <div><span>SETTLING</span><strong>0.3134 s → 0.1280 s</strong></div>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/Jnwaneli/control-systems-phase-lead-compensator" target="_blank" rel="noreferrer">
+                  View repository <span aria-hidden="true">↗</span>
+                </a>
+                <a href="https://github.com/Jnwaneli/control-systems-phase-lead-compensator/blob/main/docs/Control_Systems_Final_Project.pdf" target="_blank" rel="noreferrer">
+                  Project report <span aria-hidden="true">↗</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project reveal">
+            <figure class="project-visual github-visual filter-photo-visual">
+              <div class="visual-topbar">
+                <span>ANALOG://BAND_STOP</span>
+                <span>312 Hz — 3.12 kHz</span>
+              </div>
+              <img
+                class="github-main-image contain-image"
+                src="https://raw.githubusercontent.com/Jnwaneli/Active-Band-Stop-Filter-Design-and-LTspice-Verification/main/assets/figures/figure_01_ltspice_filter_circuit.png"
+                alt="LTspice active band-stop filter circuit"
+                loading="lazy"
+                decoding="async"
+              />
+              <div class="github-inset hardware-inset filter-inset">
+                <span>BENCH BUILD</span>
+                <img
+                  src="https://raw.githubusercontent.com/Jnwaneli/Active-Band-Stop-Filter-Design-and-LTspice-Verification/main/assets/figures/figure_07_breadboard_implementation.jpg"
+                  alt="Physical breadboard implementation of the active filter"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div class="visual-proof filter-proof"><strong>12</strong><span>DB TARGET</span></div>
+              <figcaption>LTspice simulation · Breadboard verification</figcaption>
+            </figure>
+
+            <div class="project-copy">
+              <div class="project-number">006</div>
+              <p class="project-type">ANALOG DESIGN · CIRCUIT VERIFICATION</p>
+              <h3>Active Band-Stop Filter</h3>
+              <p>
+                An op-amp filter designed from cutoff-frequency calculations,
+                modeled in LTspice, assembled on a breadboard, and evaluated
+                through measured frequency-response and oscilloscope debugging.
+              </p>
+              <ul class="tag-list" aria-label="Technologies used">
+                <li>LTspice</li>
+                <li>Analog Filters</li>
+                <li>Oscilloscope</li>
+                <li>Python / MATLAB</li>
+              </ul>
+              <div class="project-detail-grid">
+                <div><span>LOW CORNER</span><strong>≈ 312 Hz</strong></div>
+                <div><span>HIGH CORNER</span><strong>≈ 3.12 kHz</strong></div>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/Jnwaneli/Active-Band-Stop-Filter-Design-and-LTspice-Verification" target="_blank" rel="noreferrer">
+                  View repository <span aria-hidden="true">↗</span>
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section about-section" id="about" aria-labelledby="about-title">
+        <div class="about-main reveal">
+          <p class="section-kicker">02 / ABOUT</p>
+          <h2 id="about-title">
+            From the signal on a wire<br />
+            to the software that <em>understands it.</em>
+          </h2>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-copy reveal">
+            <p class="about-lead">
+              I’m a Computer Engineering student at Oral Roberts University,
+              graduating in December 2026, with a focus on embedded systems,
+              firmware, and hardware–software co-design.
+            </p>
+            <p>
+              What pulls me in is the full system: how power reaches a board, how
+              sensors become bytes, how firmware turns those bytes into useful
+              decisions, and how the whole design holds up under real constraints.
+            </p>
+            <p>
+              My work spans automotive electronics, CAN telemetry, PCB design,
+              C/C++ software, controls, and GPU-based engineering research. I’m
+              building toward a career creating dependable embedded products.
+            </p>
+          </div>
+
+          <div class="principles reveal" aria-label="Engineering principles">
+            <div class="principle">
+              <span>01</span>
+              <div><strong>Understand the system</strong><p>Trace behavior across hardware, firmware, and data—not just one layer.</p></div>
+            </div>
+            <div class="principle">
+              <span>02</span>
+              <div><strong>Design for reality</strong><p>Account for noise, timing, power, failure modes, and physical constraints.</p></div>
+            </div>
+            <div class="principle">
+              <span>03</span>
+              <div><strong>Keep learning in public</strong><p>Document decisions clearly and turn every build into a stronger next iteration.</p></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section skills-section" aria-labelledby="skills-title">
+        <div class="section-heading reveal">
+          <div>
+            <p class="section-kicker">03 / CAPABILITIES</p>
+            <h2 id="skills-title">The working stack.</h2>
+          </div>
+          <p class="section-summary">Tools I use to move from system idea to engineering implementation.</p>
+        </div>
+
+        <div class="skill-grid">
+          <article class="skill-card reveal">
+            <span class="skill-index">A</span>
+            <h3>Embedded & Firmware</h3>
+            <ul>
+              <li>C / C++</li>
+              <li>STM32 & Arduino</li>
+              <li>CAN bus fundamentals</li>
+              <li>Data structures & validation</li>
+              <li>Real-time systems concepts</li>
+            </ul>
+          </article>
+
+          <article class="skill-card reveal">
+            <span class="skill-index">B</span>
+            <h3>Hardware & Systems</h3>
+            <ul>
+              <li>Altium Designer</li>
+              <li>Schematic capture & PCB design</li>
+              <li>Power regulation & protection</li>
+              <li>Automotive wiring</li>
+              <li>Oscilloscope & multimeter</li>
+            </ul>
+          </article>
+
+          <article class="skill-card reveal">
+            <span class="skill-index">C</span>
+            <h3>Software & Research</h3>
+            <ul>
+              <li>Python & TensorFlow</li>
+              <li>Linux & Git</li>
+              <li>CUDA / GPU workflows</li>
+              <li>SLURM job scheduling</li>
+              <li>MATLAB & Simulink</li>
+            </ul>
+          </article>
+
+          <article class="skill-card reveal">
+            <span class="skill-index">D</span>
+            <h3>Engineering Foundation</h3>
+            <ul>
+              <li>Computer architecture</li>
+              <li>Digital system design</li>
+              <li>Control systems</li>
+              <li>Analog electronics</li>
+              <li>Technical documentation</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="section experience-section" id="experience" aria-labelledby="experience-title">
+        <div class="section-heading reveal">
+          <div>
+            <p class="section-kicker">04 / EXPERIENCE</p>
+            <h2 id="experience-title">Built through doing.</h2>
+          </div>
+        </div>
+
+        <div class="timeline">
+          <article class="timeline-item reveal">
+            <div class="timeline-date">2025 — PRESENT</div>
+            <div class="timeline-role">
+              <p>FORMULA SAE · ORAL ROBERTS UNIVERSITY</p>
+              <h3>Electrical Systems Team Member</h3>
+            </div>
+            <p class="timeline-detail">
+              Developing vehicle electrical architecture, paddle-shift controls,
+              ignition integration, wiring, sensors, CAN, dash, and telemetry for
+              an ICE Formula SAE platform.
+            </p>
+          </article>
+
+          <article class="timeline-item reveal">
+            <div class="timeline-date">2025 — 2026</div>
+            <div class="timeline-role">
+              <p>WIRELESS COMMUNICATIONS RESEARCH</p>
+              <h3>Undergraduate Researcher</h3>
+            </div>
+            <p class="timeline-detail">
+              Built and trained a deep-learning approach for wireless fading-channel
+              modeling using Python, TensorFlow, CUDA, and Titan HPC resources.
+            </p>
+          </article>
+
+          <article class="timeline-item reveal">
+            <div class="timeline-date">CURRENT</div>
+            <div class="timeline-role">
+              <p>PHYSICS I & II · ORAL ROBERTS UNIVERSITY</p>
+              <h3>Teaching Assistant</h3>
+            </div>
+            <p class="timeline-detail">
+              Supporting students through foundational physics concepts and
+              problem-solving while strengthening technical communication.
+            </p>
+          </article>
+
+          <article class="timeline-item reveal">
+            <div class="timeline-date">2023 — 2026</div>
+            <div class="timeline-role">
+              <p>B.S. COMPUTER ENGINEERING</p>
+              <h3>Oral Roberts University</h3>
+            </div>
+            <p class="timeline-detail">
+              Coursework in microprocessors, computer architecture, digital design,
+              electronics, control systems, networks, and engineering computation.
+              Graduation expected December 2026.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="contact-section" id="contact" aria-labelledby="contact-title">
+        <div class="contact-orbit" aria-hidden="true"><span></span><i></i></div>
+        <p class="section-kicker reveal">05 / CONTACT</p>
+        <h2 id="contact-title" class="reveal">Let’s build something<br /><em>that has to work.</em></h2>
+        <p class="contact-copy reveal">
+          I’m interested in embedded firmware, automotive electronics, and systems
+          roles where software stays close to the hardware.
+        </p>
+        <div class="contact-links reveal">
+          <a class="contact-link" href="mailto:joshwiznwaneli393@gmail.com">
+            Email me <span aria-hidden="true">↗</span>
+          </a>
+          <a
+            class="contact-link"
+            href="https://github.com/Jnwaneli"
+            target="_blank"
+            rel="noreferrer"
+          >
+            GitHub <span aria-hidden="true">↗</span>
+          </a>
+          <a
+            class="contact-link"
+            href="https://www.linkedin.com/in/joshua-nwaneli-911019308"
+            target="_blank"
+            rel="noreferrer"
+          >
+            LinkedIn <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand footer-brand" href="#top"><span class="brand-mark">JN</span></a>
+      <p>Designed for the intersection of hardware and code.</p>
+      <div>
+        <span>© <span class="current-year">2026</span> Joshua Nwaneli</span>
+        <a href="https://github.com/Jnwaneli" target="_blank" rel="noreferrer">GitHub ↗</a>
+        <a href="#top">Back to top ↑</a>
+      </div>
+    </footer>
+  </body>
+</html>
