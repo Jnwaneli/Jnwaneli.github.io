@@ -5,16 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Portfolio of Joshua Nwaneli, a computer engineer focused on embedded systems, firmware, telemetry, and hardware-software integration."
+      content="Portfolio of Joshua Nwaneli, a computer engineer focused on embedded systems, automotive electronics, firmware, CAN telemetry, PCB design, and hardware-software integration."
     />
     <meta name="theme-color" content="#07100d" />
-    <meta property="og:title" content="Joshua Nwaneli | Embedded Systems & Firmware" />
+    <meta property="og:title" content="Joshua Nwaneli | Embedded Systems & Automotive Electronics" />
     <meta
       property="og:description"
-      content="Embedded systems, firmware, CAN telemetry, Formula SAE electronics, and engineering research."
+      content="Formula SAE electrical systems, C++ CAN diagnostics, STM32 and FreeRTOS firmware, PCB design, controls, and engineering research."
     />
     <meta property="og:type" content="website" />
-    <title>Joshua Nwaneli | Embedded Systems & Firmware</title>
+    <title>Joshua Nwaneli | Embedded Systems & Automotive Electronics</title>
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -69,8 +69,8 @@
           </h1>
 
           <p class="hero-intro reveal">
-            I'm Joshua—an embedded systems and firmware engineer working across
-            microcontrollers, CAN networks, PCB design, and real-time telemetry.
+            I'm Joshua—an embedded and electrical engineer working across automotive
+            electronics, STM32 firmware, CAN networks, PCB design, controls, and test.
           </p>
 
           <div class="hero-actions reveal">
@@ -137,7 +137,7 @@
 
           <div class="system-readout">
             <div><span>BUS</span><strong>ONLINE</strong></div>
-            <div><span>PACKETS</span><strong class="packet-count">12,840</strong></div>
+            <div><span>STACK</span><strong>C++ / RTOS</strong></div>
             <div><span>STATUS</span><strong>NOMINAL</strong></div>
           </div>
         </div>
@@ -150,16 +150,16 @@
 
       <section class="marquee" aria-label="Areas of expertise">
         <div class="marquee-track">
+          <span>FORMULA SAE</span><i></i>
           <span>EMBEDDED SYSTEMS</span><i></i>
-          <span>FIRMWARE</span><i></i>
+          <span>C++17</span><i></i>
+          <span>FREERTOS</span><i></i>
           <span>CAN BUS</span><i></i>
           <span>PCB DESIGN</span><i></i>
-          <span>C / C++</span><i></i>
-          <span>HARDWARE–SOFTWARE INTEGRATION</span><i></i>
+          <span aria-hidden="true">FORMULA SAE</span><i aria-hidden="true"></i>
           <span aria-hidden="true">EMBEDDED SYSTEMS</span><i aria-hidden="true"></i>
-          <span aria-hidden="true">FIRMWARE</span><i aria-hidden="true"></i>
-          <span aria-hidden="true">CAN BUS</span><i aria-hidden="true"></i>
-          <span aria-hidden="true">PCB DESIGN</span><i aria-hidden="true"></i>
+          <span aria-hidden="true">C++17</span><i aria-hidden="true"></i>
+          <span aria-hidden="true">FREERTOS</span><i aria-hidden="true"></i>
         </div>
       </section>
 
@@ -170,64 +170,17 @@
             <h2 id="work-title">Engineering in motion.</h2>
           </div>
           <p class="section-summary">
-            Projects built around real signals, physical constraints, and the
-            decisions that connect software to hardware.
+            Vehicle electronics, embedded software, custom hardware, controls, and
+            test workflows built around real signals and physical constraints.
           </p>
         </div>
 
         <div class="project-list">
           <article class="project project-featured reveal">
-            <div class="project-visual telemetry-visual" aria-hidden="true">
-              <div class="visual-topbar">
-                <span>TELEMETRY://LIVE</span>
-                <span>0x100</span>
-              </div>
-              <div class="telemetry-layout">
-                <div class="gauge">
-                  <svg viewBox="0 0 220 135" role="presentation">
-                    <path class="gauge-track" d="M25 115 A85 85 0 0 1 195 115" />
-                    <path class="gauge-value" d="M25 115 A85 85 0 0 1 176 63" />
-                  </svg>
-                  <div class="gauge-number"><strong>12.6</strong><span>V</span></div>
-                </div>
-                <div class="telemetry-stats">
-                  <div><span>TEMP</span><strong>34.5°C</strong></div>
-                  <div><span>RPM</span><strong>8,420</strong></div>
-                  <div><span>FRAME</span><strong>VALID</strong></div>
-                </div>
-              </div>
-              <div class="data-stream">
-                <span>08</span><span>10</span><span>00</span><span>FF</span><span>0A</span><span>01</span><span>05</span><span class="stream-active">A4</span>
-              </div>
-            </div>
-
-            <div class="project-copy">
-              <div class="project-number">001</div>
-              <p class="project-type">EMBEDDED SOFTWARE · FEATURED</p>
-              <h3>CAN Telemetry Decoder</h3>
-              <p>
-                A C++ telemetry pipeline that validates CAN frames, decodes raw
-                payloads into scaled engineering values, and buffers incoming
-                vehicle data through a reusable circular buffer architecture.
-              </p>
-              <ul class="tag-list" aria-label="Technologies used">
-                <li>C++</li>
-                <li>CAN Bus</li>
-                <li>Data Structures</li>
-                <li>Embedded Architecture</li>
-              </ul>
-              <div class="project-detail-grid">
-                <div><span>FOCUS</span><strong>Reliable data flow</strong></div>
-                <div><span>OUTPUT</span><strong>Scaled telemetry</strong></div>
-              </div>
-            </div>
-          </article>
-
-          <article class="project reveal">
             <figure class="project-visual github-visual fsae-photo-visual">
               <div class="visual-topbar">
-                <span>FSAE://ELECTRICAL</span>
-                <span>GSX-R600</span>
+                <span>FSAE://ELECTRICAL_EMBEDDED</span>
+                <span>ICE VEHICLE</span>
               </div>
               <img
                 class="github-main-image"
@@ -245,27 +198,29 @@
                   decoding="async"
                 />
               </div>
-              <figcaption>Project Lazarus · ORU Formula SAE 2026</figcaption>
+              <figcaption>Project Lazarus · ORU Formula SAE</figcaption>
             </figure>
 
             <div class="project-copy">
-              <div class="project-number">002</div>
-              <p class="project-type">FORMULA SAE · TEAM SYSTEM</p>
-              <h3>FSAE Vehicle Electronics</h3>
+              <div class="project-number">001</div>
+              <p class="project-type">FORMULA SAE · ELECTRICAL LEAD / SENIOR PROJECT</p>
+              <h3>Formula SAE Electrical and Embedded Systems</h3>
               <p>
-                Electrical and control-system development for an ICE Formula SAE
-                car, including paddle-shift actuation, ignition-circuit redesign,
-                ECU integration, vehicle wiring, sensors, and telemetry planning.
+                Led electrical and embedded-system integration for an ICE Formula SAE
+                vehicle, mapping electronics and harness connections while troubleshooting
+                ECU, sensors, relays, fuses, power delivery, grounding, and ignition. Designed
+                an Arduino-controlled paddle shifter using an H-bridge, linear actuator,
+                debounce logic, and timed sequential actuation.
               </p>
               <ul class="tag-list" aria-label="Technologies used">
                 <li>Vehicle Electronics</li>
+                <li>ECU & Sensors</li>
                 <li>Arduino</li>
-                <li>H-Bridge</li>
-                <li>System Integration</li>
+                <li>Hardware Debugging</li>
               </ul>
               <div class="project-detail-grid">
-                <div><span>PRIMARY ROLE</span><strong>Paddle-shift control</strong></div>
-                <div><span>PLATFORM</span><strong>Suzuki GSX-R600</strong></div>
+                <div><span>ROLE</span><strong>Electrical systems lead</strong></div>
+                <div><span>FOCUS</span><strong>Harness · ignition · controls</strong></div>
               </div>
               <div class="project-links">
                 <a href="https://github.com/Jnwaneli/fsae-electrical-systems-portfolio" target="_blank" rel="noreferrer">
@@ -273,6 +228,59 @@
                 </a>
                 <a href="https://oruracing.com" target="_blank" rel="noreferrer">
                   Team site <span aria-hidden="true">↗</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project reveal">
+            <div class="project-visual telemetry-visual" aria-hidden="true">
+              <div class="visual-topbar">
+                <span>CAN://FAULT_ANALYZER</span>
+                <span>500 KBPS</span>
+              </div>
+              <div class="telemetry-layout">
+                <div class="gauge">
+                  <svg viewBox="0 0 220 135" role="presentation">
+                    <path class="gauge-track" d="M25 115 A85 85 0 0 1 195 115" />
+                    <path class="gauge-value" d="M25 115 A85 85 0 0 1 176 63" />
+                  </svg>
+                  <div class="gauge-number"><strong>12.6</strong><span>V</span></div>
+                </div>
+                <div class="telemetry-stats">
+                  <div><span>CAN IDS</span><strong>4</strong></div>
+                  <div><span>FAULT RULES</span><strong>8</strong></div>
+                  <div><span>FRAME</span><strong>VALID</strong></div>
+                </div>
+              </div>
+              <div class="data-stream">
+                <span>00</span><span>08</span><span>10</span><span>00</span><span>FF</span><span>0A</span><span>07</span><span class="stream-active">01</span>
+              </div>
+            </div>
+
+            <div class="project-copy">
+              <div class="project-number">002</div>
+              <p class="project-type">C++17 · FREERTOS · EMBEDDED CAN</p>
+              <h3>C++ CAN Telemetry Decoder and Fault Analyzer</h3>
+              <p>
+                Built a C++17 pipeline for simulated, logged, and STM32-generated CAN
+                frames with CSV parsing, circular buffering, dispatcher-based routing,
+                little-endian decoding, bit-masked status flags, validation, statistics,
+                and structured diagnostics across four standard 8-byte CAN messages.
+              </p>
+              <ul class="tag-list" aria-label="Technologies used">
+                <li>C++17</li>
+                <li>FreeRTOS</li>
+                <li>STM32 FDCAN</li>
+                <li>CAN Bus</li>
+              </ul>
+              <div class="project-detail-grid">
+                <div><span>DIAGNOSTICS</span><strong>8 fault / warning rules</strong></div>
+                <div><span>HARDWARE</span><strong>STM32 · USB-CAN capture</strong></div>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/Jnwaneli/cpp-can-telemetry-decoder" target="_blank" rel="noreferrer">
+                  View repository <span aria-hidden="true">↗</span>
                 </a>
               </div>
             </div>
@@ -306,12 +314,12 @@
 
             <div class="project-copy">
               <div class="project-number">003</div>
-              <p class="project-type">PCB DESIGN · HARDWARE</p>
+              <p class="project-type">PCB DESIGN · EMBEDDED HARDWARE</p>
               <h3>STM32 CAN Telemetry Board</h3>
               <p>
-                A custom STM32F103 telemetry PCB designed and routed in Altium,
-                combining protected 12 V power, regulated 5 V and 3.3 V rails,
-                conditioned sensor inputs, CAN communication, SWD, and debug access.
+                Designed and documented a custom STM32F103 CAN telemetry PCB with
+                protected 12 V input, regulated 5 V and 3.3 V rails, sensor interfaces,
+                CAN transceiver, SWD, LEDs, connectors, and accessible test points.
               </p>
               <ul class="tag-list" aria-label="Technologies used">
                 <li>Altium Designer</li>
@@ -321,7 +329,7 @@
               </ul>
               <div class="project-detail-grid">
                 <div><span>RESULT</span><strong>DRC clean · 0 unrouted</strong></div>
-                <div><span>OUTPUT</span><strong>Manufacturing files</strong></div>
+                <div><span>OUTPUT</span><strong>BOM · Gerbers · P&amp;P</strong></div>
               </div>
               <div class="project-links">
                 <a href="https://github.com/Jnwaneli/stm32-can-telemetry-node" target="_blank" rel="noreferrer">
@@ -341,24 +349,18 @@
                 <span>TITAN HPC</span>
               </div>
               <div class="network">
-                <div class="network-layer layer-input">
-                  <i></i><i></i><i></i><i></i><i></i>
-                </div>
+                <div class="network-layer layer-input"><i></i><i></i><i></i><i></i><i></i></div>
                 <div class="network-lines lines-a"></div>
-                <div class="network-layer layer-hidden-a">
-                  <i></i><i></i><i></i><i></i><i></i><i></i>
-                </div>
+                <div class="network-layer layer-hidden-a"><i></i><i></i><i></i><i></i><i></i><i></i></div>
                 <div class="network-lines lines-b"></div>
-                <div class="network-layer layer-hidden-b">
-                  <i></i><i></i><i></i><i></i>
-                </div>
+                <div class="network-layer layer-hidden-b"><i></i><i></i><i></i><i></i></div>
                 <div class="network-lines lines-c"></div>
                 <div class="network-layer layer-output"><i></i><i></i></div>
               </div>
               <div class="research-metrics">
-                <div><span>PARAMETERS</span><strong>1.33M</strong></div>
-                <div><span>TRAINING</span><strong>500 EPOCHS</strong></div>
-                <div><span>STACK</span><strong>TF + CUDA</strong></div>
+                <div><span>WORKFLOW</span><strong>PYTHON</strong></div>
+                <div><span>COMPUTE</span><strong>HPC</strong></div>
+                <div><span>SCHEDULER</span><strong>SLURM</strong></div>
               </div>
             </div>
 
@@ -367,19 +369,19 @@
               <p class="project-type">ENGINEERING RESEARCH · MACHINE LEARNING</p>
               <h3>Wireless Channel Modeling</h3>
               <p>
-                Deep-learning research with Dr. Xiaomin Ma using a feedforward
-                neural network to model wireless communication channels with
-                fading, trained on ORU's Titan high-performance computing system.
+                Supported faculty-led wireless-channel modeling research by running and
+                modifying deep-learning experiments, reviewing training behavior, validating
+                outputs through logs and plots, and documenting findings for engineering review.
               </p>
               <ul class="tag-list" aria-label="Technologies used">
                 <li>Python</li>
-                <li>TensorFlow</li>
-                <li>CUDA</li>
+                <li>TensorFlow / Keras</li>
+                <li>Linux</li>
                 <li>SLURM</li>
               </ul>
               <div class="project-detail-grid">
-                <div><span>COMPUTE</span><strong>GPU / Titan HPC</strong></div>
-                <div><span>METRICS</span><strong>MSE + RMSE</strong></div>
+                <div><span>COMPUTE</span><strong>Titan HPC</strong></div>
+                <div><span>FOCUS</span><strong>Validation & troubleshooting</strong></div>
               </div>
             </div>
           </article>
@@ -415,9 +417,9 @@
               <p class="project-type">CONTROL SYSTEMS · ANALOG HARDWARE</p>
               <h3>Phase-Lead Compensator</h3>
               <p>
-                A classical controller taken from third-order plant modeling and
-                root-locus design through MATLAB, Simulink, practical component
-                selection, breadboard implementation, and oscilloscope verification.
+                Designed a classical controller from third-order plant modeling and
+                root-locus analysis through MATLAB, Simulink, component selection,
+                breadboard implementation, and oscilloscope verification.
               </p>
               <ul class="tag-list" aria-label="Technologies used">
                 <li>MATLAB</li>
@@ -471,15 +473,15 @@
               <p class="project-type">ANALOG DESIGN · CIRCUIT VERIFICATION</p>
               <h3>Active Band-Stop Filter</h3>
               <p>
-                An op-amp filter designed from cutoff-frequency calculations,
-                modeled in LTspice, assembled on a breadboard, and evaluated
-                through measured frequency-response and oscilloscope debugging.
+                Designed an op-amp filter from cutoff-frequency calculations, modeled
+                it in LTspice, assembled it on a breadboard, and evaluated its measured
+                frequency response using an oscilloscope and function generator.
               </p>
               <ul class="tag-list" aria-label="Technologies used">
                 <li>LTspice</li>
                 <li>Analog Filters</li>
                 <li>Oscilloscope</li>
-                <li>Python / MATLAB</li>
+                <li>Function Generator</li>
               </ul>
               <div class="project-detail-grid">
                 <div><span>LOW CORNER</span><strong>≈ 312 Hz</strong></div>
@@ -507,34 +509,35 @@
         <div class="about-grid">
           <div class="about-copy reveal">
             <p class="about-lead">
-              I’m a Computer Engineering student at Oral Roberts University,
-              graduating in December 2026, with a focus on embedded systems,
-              firmware, and hardware–software co-design.
+              I’m a Computer Engineer at Oral Roberts University focused on embedded
+              systems, automotive electronics, firmware, hardware test, and
+              hardware–software integration.
             </p>
             <p>
-              What pulls me in is the full system: how power reaches a board, how
-              sensors become bytes, how firmware turns those bytes into useful
-              decisions, and how the whole design holds up under real constraints.
+              What pulls me in is the complete system: how power reaches a board, how
+              sensors become bytes, how firmware schedules and moves data, how desktop
+              software diagnoses it, and how the design behaves under real constraints.
             </p>
             <p>
-              My work spans automotive electronics, CAN telemetry, PCB design,
-              C/C++ software, controls, and GPU-based engineering research. I’m
-              building toward a career creating dependable embedded products.
+              My work spans Formula SAE vehicle electronics, C++ and FreeRTOS CAN
+              telemetry, custom PCB design, controls, analog circuits, and Python-based
+              engineering research. I am building toward dependable embedded products
+              that connect software directly to physical systems.
             </p>
           </div>
 
           <div class="principles reveal" aria-label="Engineering principles">
             <div class="principle">
               <span>01</span>
-              <div><strong>Understand the system</strong><p>Trace behavior across hardware, firmware, and data—not just one layer.</p></div>
+              <div><strong>Understand the system</strong><p>Trace behavior across power, hardware, firmware, communication, and data.</p></div>
             </div>
             <div class="principle">
               <span>02</span>
-              <div><strong>Design for reality</strong><p>Account for noise, timing, power, failure modes, and physical constraints.</p></div>
+              <div><strong>Test the interfaces</strong><p>Use measurements, logs, validation rules, and repeatable experiments to isolate faults.</p></div>
             </div>
             <div class="principle">
               <span>03</span>
-              <div><strong>Keep learning in public</strong><p>Document decisions clearly and turn every build into a stronger next iteration.</p></div>
+              <div><strong>Document the decisions</strong><p>Make wiring, code, test results, and design tradeoffs clear enough for the next engineer.</p></div>
             </div>
           </div>
         </div>
@@ -546,7 +549,7 @@
             <p class="section-kicker">03 / CAPABILITIES</p>
             <h2 id="skills-title">The working stack.</h2>
           </div>
-          <p class="section-summary">Tools I use to move from system idea to engineering implementation.</p>
+          <p class="section-summary">Tools I use to move from system idea to engineering implementation and test.</p>
         </div>
 
         <div class="skill-grid">
@@ -554,34 +557,34 @@
             <span class="skill-index">A</span>
             <h3>Embedded & Firmware</h3>
             <ul>
-              <li>C / C++</li>
-              <li>STM32 & Arduino</li>
-              <li>CAN bus fundamentals</li>
-              <li>Data structures & validation</li>
-              <li>Real-time systems concepts</li>
+              <li>C / C++17</li>
+              <li>STM32F103 & STM32G431</li>
+              <li>FreeRTOS task design</li>
+              <li>FDCAN / CAN bus</li>
+              <li>UART / SPI / I2C / ADC</li>
             </ul>
           </article>
 
           <article class="skill-card reveal">
             <span class="skill-index">B</span>
-            <h3>Hardware & Systems</h3>
+            <h3>Electrical & Hardware</h3>
             <ul>
               <li>Altium Designer</li>
-              <li>Schematic capture & PCB design</li>
+              <li>Schematic capture & PCB layout</li>
+              <li>Automotive wiring & ECU interfaces</li>
               <li>Power regulation & protection</li>
-              <li>Automotive wiring</li>
-              <li>Oscilloscope & multimeter</li>
+              <li>Oscilloscope, DMM & function generator</li>
             </ul>
           </article>
 
           <article class="skill-card reveal">
             <span class="skill-index">C</span>
-            <h3>Software & Research</h3>
+            <h3>Software & Test</h3>
             <ul>
-              <li>Python & TensorFlow</li>
-              <li>Linux & Git</li>
-              <li>CUDA / GPU workflows</li>
-              <li>SLURM job scheduling</li>
+              <li>Python & TensorFlow/Keras</li>
+              <li>Linux, SLURM & Git</li>
+              <li>CSV parsing & data validation</li>
+              <li>Fault analysis & statistics</li>
               <li>MATLAB & Simulink</li>
             </ul>
           </article>
@@ -613,49 +616,51 @@
             <div class="timeline-date">2025 — PRESENT</div>
             <div class="timeline-role">
               <p>FORMULA SAE · ORAL ROBERTS UNIVERSITY</p>
-              <h3>Electrical Systems Team Member</h3>
+              <h3>Electrical Lead / Senior Project</h3>
             </div>
             <p class="timeline-detail">
-              Developing vehicle electrical architecture, paddle-shift controls,
-              ignition integration, wiring, sensors, CAN, dash, and telemetry for
-              an ICE Formula SAE platform.
+              Leading vehicle electrical and embedded-system integration across wiring,
+              ECU and sensor interfaces, power delivery, ignition, diagnostics, and an
+              Arduino-controlled paddle-shifting system.
             </p>
           </article>
 
           <article class="timeline-item reveal">
-            <div class="timeline-date">2025 — 2026</div>
+            <div class="timeline-date">SEP 2024 — PRESENT</div>
             <div class="timeline-role">
-              <p>WIRELESS COMMUNICATIONS RESEARCH</p>
-              <h3>Undergraduate Researcher</h3>
+              <p>WIRELESS COMMUNICATIONS RESEARCH · ORU</p>
+              <h3>Research Assistant</h3>
             </div>
             <p class="timeline-detail">
-              Built and trained a deep-learning approach for wireless fading-channel
-              modeling using Python, TensorFlow, CUDA, and Titan HPC resources.
+              Running Python and TensorFlow/Keras experiments on Titan HPC/Linux,
+              reviewing logs and plots, validating output ranges, troubleshooting
+              configurations, and documenting findings for faculty-led research.
             </p>
           </article>
 
           <article class="timeline-item reveal">
-            <div class="timeline-date">CURRENT</div>
+            <div class="timeline-date">SEP 2024 — PRESENT</div>
             <div class="timeline-role">
-              <p>PHYSICS I & II · ORAL ROBERTS UNIVERSITY</p>
-              <h3>Teaching Assistant</h3>
+              <p>ORAL ROBERTS UNIVERSITY</p>
+              <h3>Teaching Assistant / Grader</h3>
             </div>
             <p class="timeline-detail">
-              Supporting students through foundational physics concepts and
-              problem-solving while strengthening technical communication.
+              Reviewing technical assignments for accuracy, applying established rubrics,
+              and providing clear corrections that strengthen engineering calculations,
+              documentation, and communication.
             </p>
           </article>
 
           <article class="timeline-item reveal">
-            <div class="timeline-date">2023 — 2026</div>
+            <div class="timeline-date">EXPECTED DEC 2026</div>
             <div class="timeline-role">
-              <p>B.S. COMPUTER ENGINEERING</p>
+              <p>B.S. COMPUTER ENGINEERING · GPA 3.82</p>
               <h3>Oral Roberts University</h3>
             </div>
             <p class="timeline-detail">
-              Coursework in microprocessors, computer architecture, digital design,
-              electronics, control systems, networks, and engineering computation.
-              Graduation expected December 2026.
+              Minor in Computer Information Technology, with coursework in microprocessors,
+              computer architecture, digital design, electronics, controls, networks, and
+              engineering computation.
             </p>
           </article>
         </div>
@@ -666,27 +671,17 @@
         <p class="section-kicker reveal">05 / CONTACT</p>
         <h2 id="contact-title" class="reveal">Let’s build something<br /><em>that has to work.</em></h2>
         <p class="contact-copy reveal">
-          I’m interested in embedded firmware, automotive electronics, and systems
-          roles where software stays close to the hardware.
+          I’m interested in embedded firmware, electrical engineering, automotive
+          electronics, hardware test, PCB design, controls, and semiconductor validation.
         </p>
         <div class="contact-links reveal">
-          <a class="contact-link" href="mailto:joshwiznwaneli393@gmail.com">
+          <a class="contact-link" href="mailto:joshnwaneli@gmail.com">
             Email me <span aria-hidden="true">↗</span>
           </a>
-          <a
-            class="contact-link"
-            href="https://github.com/Jnwaneli"
-            target="_blank"
-            rel="noreferrer"
-          >
+          <a class="contact-link" href="https://github.com/Jnwaneli" target="_blank" rel="noreferrer">
             GitHub <span aria-hidden="true">↗</span>
           </a>
-          <a
-            class="contact-link"
-            href="https://www.linkedin.com/in/joshua-nwaneli-911019308"
-            target="_blank"
-            rel="noreferrer"
-          >
+          <a class="contact-link" href="https://www.linkedin.com/in/joshua-nwaneli-911019308" target="_blank" rel="noreferrer">
             LinkedIn <span aria-hidden="true">↗</span>
           </a>
         </div>
@@ -695,7 +690,7 @@
 
     <footer class="site-footer">
       <a class="brand footer-brand" href="#top"><span class="brand-mark">JN</span></a>
-      <p>Designed for the intersection of hardware and code.</p>
+      <p>Designed for the intersection of hardware, firmware, and test.</p>
       <div>
         <span>© <span class="current-year">2026</span> Joshua Nwaneli</span>
         <a href="https://github.com/Jnwaneli" target="_blank" rel="noreferrer">GitHub ↗</a>
