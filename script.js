@@ -1,3 +1,24 @@
+const appearanceFix = document.createElement('style');
+appearanceFix.textContent = `
+  html,
+  body,
+  body *:not(input):not(textarea):not([contenteditable="true"]) {
+    caret-color: transparent !important;
+  }
+
+  body,
+  .site-shell,
+  .intro-screen {
+    -webkit-user-select: none;
+    user-select: none;
+  }
+
+  .profile-card img {
+    filter: none !important;
+  }
+`;
+document.head.appendChild(appearanceFix);
+
 const menuButton = document.querySelector('.menu-button');
 const siteNav = document.querySelector('.site-nav');
 const navLinks = document.querySelectorAll('.site-nav a');
@@ -56,6 +77,17 @@ menuButton?.addEventListener('click', () => {
 });
 
 navLinks.forEach((link) => link.addEventListener('click', closeMenu));
+
+document.addEventListener('pointerdown', (event) => {
+  if (event.target.closest('a, button, input, textarea, [contenteditable="true"]')) return;
+
+  const selection = window.getSelection();
+  selection?.removeAllRanges();
+
+  if (document.activeElement instanceof HTMLElement) {
+    document.activeElement.blur();
+  }
+});
 
 document.addEventListener('keydown', (event) => {
   if (event.key === 'Escape') closeMenu();
