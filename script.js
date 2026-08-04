@@ -67,23 +67,21 @@ appearanceFix.textContent = `
   }
 
   .intro-line-two {
-    display: flex !important;
-    flex-wrap: nowrap !important;
-    align-items: baseline;
-    width: max-content;
-    max-width: 100%;
+    display: block !important;
+    width: 100% !important;
+    max-width: none !important;
+    overflow: visible !important;
     white-space: nowrap !important;
-    font-size: clamp(2.35rem, 8.2vw, 5.2rem) !important;
-    letter-spacing: -0.065em;
+    letter-spacing: -0.065em !important;
+    line-height: 1 !important;
   }
 
   .intro-char {
-    display: inline-block;
-    flex: 0 0 auto;
+    display: inline-block !important;
     opacity: 0;
     transform: translateY(34px) scale(0.94);
     transform-origin: 50% 100%;
-    animation: intro-letter-build 0.82s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    animation: intro-letter-build 1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
   }
 
   @keyframes intro-letter-build {
@@ -100,31 +98,31 @@ appearanceFix.textContent = `
   }
 
   .build-list > div:nth-child(1) {
-    animation-delay: 3.05s !important;
+    animation-delay: 4.15s !important;
   }
 
   .build-list > div:nth-child(2) {
-    animation-delay: 3.28s !important;
+    animation-delay: 4.42s !important;
   }
 
   .build-list > div:nth-child(3) {
-    animation-delay: 3.51s !important;
+    animation-delay: 4.69s !important;
   }
 
   .build-list > div:nth-child(1) i::after {
-    animation-delay: 3.18s !important;
+    animation-delay: 4.3s !important;
   }
 
   .build-list > div:nth-child(2) i::after {
-    animation-delay: 3.41s !important;
+    animation-delay: 4.57s !important;
   }
 
   .build-list > div:nth-child(3) i::after {
-    animation-delay: 3.64s !important;
+    animation-delay: 4.84s !important;
   }
 
   .enter-button {
-    animation-delay: 3.95s !important;
+    animation-delay: 5.25s !important;
   }
 
   .project-thumbnail-link {
@@ -161,12 +159,6 @@ appearanceFix.textContent = `
     box-shadow: inset 0 0 0 2px #ffffff;
   }
 
-  @media (max-width: 560px) {
-    .intro-line-two {
-      font-size: clamp(1.8rem, 10.5vw, 3rem) !important;
-    }
-  }
-
   @media (prefers-reduced-motion: reduce) {
     .intro-char {
       opacity: 1;
@@ -200,11 +192,30 @@ function buildLetterIntro() {
       span.className = 'intro-char';
       span.setAttribute('aria-hidden', 'true');
       span.textContent = character === ' ' ? '\u00a0' : character;
-      span.style.animationDelay = `${320 + characterIndex * 75 + lineIndex * 180}ms`;
+      span.style.animationDelay = `${360 + characterIndex * 105 + lineIndex * 240}ms`;
       line.appendChild(span);
       characterIndex += 1;
     });
   });
+}
+
+function fitIntroName() {
+  const nameLine = document.querySelector('.intro-line-two');
+  const frame = document.querySelector('.intro-frame');
+  if (!nameLine || !frame) return;
+
+  const frameStyle = window.getComputedStyle(frame);
+  const availableWidth = frame.clientWidth
+    - Number.parseFloat(frameStyle.paddingLeft)
+    - Number.parseFloat(frameStyle.paddingRight);
+
+  let fontSize = Math.min(78, Math.max(34, window.innerWidth * 0.082));
+  nameLine.style.fontSize = `${fontSize}px`;
+
+  while (nameLine.scrollWidth > availableWidth && fontSize > 28) {
+    fontSize -= 1;
+    nameLine.style.fontSize = `${fontSize}px`;
+  }
 }
 
 function linkProjectThumbnails() {
@@ -258,7 +269,11 @@ function enterPortfolio({ instant = false } = {}) {
 }
 
 buildLetterIntro();
+fitIntroName();
 linkProjectThumbnails();
+
+window.requestAnimationFrame(fitIntroName);
+document.fonts?.ready?.then(fitIntroName);
 
 let introAlreadySeen = false;
 try {
@@ -316,6 +331,7 @@ document.addEventListener('keydown', (event) => {
 });
 
 window.addEventListener('resize', () => {
+  fitIntroName();
   if (window.innerWidth > 880) closeMenu();
 });
 
