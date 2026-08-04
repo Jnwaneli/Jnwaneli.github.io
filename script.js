@@ -32,32 +32,40 @@ appearanceFix.textContent = `
 
   .circuit-background {
     z-index: 0 !important;
-    opacity: 0.72;
+    opacity: 0.96;
     mix-blend-mode: screen;
   }
 
   .circuit-background svg {
-    filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.12));
+    filter: drop-shadow(0 0 12px rgba(255, 255, 255, 0.24));
   }
 
   .circuit-paths path {
-    stroke: rgba(255, 255, 255, 0.18) !important;
+    stroke: rgba(255, 255, 255, 0.30) !important;
+    stroke-width: 1.8 !important;
     stroke-dasharray: 22 14 !important;
     animation-duration: 14s !important;
   }
 
   .circuit-nodes circle {
-    fill: rgba(255, 255, 255, 0.52) !important;
+    fill: rgba(255, 255, 255, 0.76) !important;
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.50));
   }
 
   .site-shell {
     position: relative;
     z-index: 1 !important;
-    background: linear-gradient(180deg, rgba(5, 5, 5, 0.78), rgba(5, 5, 5, 0.90));
+    background: linear-gradient(180deg, rgba(5, 5, 5, 0.60), rgba(5, 5, 5, 0.78));
   }
 
   .intro-screen {
     z-index: 1500 !important;
+    background: rgba(0, 0, 0, 0.86) !important;
+  }
+
+  .intro-frame {
+    background: rgba(8, 8, 8, 0.76) !important;
+    backdrop-filter: blur(3px);
   }
 
   .intro-line {
@@ -81,7 +89,7 @@ appearanceFix.textContent = `
     opacity: 0;
     transform: translateY(34px) scale(0.94);
     transform-origin: 50% 100%;
-    animation: intro-letter-build 1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    animation: intro-letter-build 0.58s cubic-bezier(0.22, 1, 0.36, 1) forwards;
   }
 
   @keyframes intro-letter-build {
@@ -95,34 +103,6 @@ appearanceFix.textContent = `
       transform: translateY(0) scale(1);
       filter: blur(0);
     }
-  }
-
-  .build-list > div:nth-child(1) {
-    animation-delay: 4.15s !important;
-  }
-
-  .build-list > div:nth-child(2) {
-    animation-delay: 4.42s !important;
-  }
-
-  .build-list > div:nth-child(3) {
-    animation-delay: 4.69s !important;
-  }
-
-  .build-list > div:nth-child(1) i::after {
-    animation-delay: 4.3s !important;
-  }
-
-  .build-list > div:nth-child(2) i::after {
-    animation-delay: 4.57s !important;
-  }
-
-  .build-list > div:nth-child(3) i::after {
-    animation-delay: 4.84s !important;
-  }
-
-  .enter-button {
-    animation-delay: 5.25s !important;
   }
 
   .project-thumbnail-link {
@@ -192,7 +172,7 @@ function buildLetterIntro() {
       span.className = 'intro-char';
       span.setAttribute('aria-hidden', 'true');
       span.textContent = character === ' ' ? '\u00a0' : character;
-      span.style.animationDelay = `${360 + characterIndex * 105 + lineIndex * 240}ms`;
+      span.style.animationDelay = `${260 + characterIndex * 48 + lineIndex * 140}ms`;
       line.appendChild(span);
       characterIndex += 1;
     });
