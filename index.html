@@ -13,8 +13,19 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
-  <script src="script.js" defer></script>
+  <style>
+    html, body, body * { caret-color: transparent !important; }
+    body, .site-shell, .intro-screen, main, section, article, div, h1, h2, h3, p, span, strong, small, li {
+      -webkit-user-select: none !important;
+      user-select: none !important;
+    }
+    .profile-card img {
+      filter: none !important;
+      -webkit-filter: none !important;
+    }
+  </style>
+  <link rel="stylesheet" href="styles.css?v=20260804-3" />
+  <script src="script.js?v=20260804-3" defer></script>
 </head>
 <body class="intro-open">
   <a class="skip-link" href="#main">Skip to content</a>
@@ -100,7 +111,7 @@
             </div>
           </div>
           <aside class="profile-card" aria-label="Joshua Nwaneli profile">
-            <img src="https://avatars.githubusercontent.com/u/193830728?v=4" alt="Portrait of Joshua Nwaneli" />
+            <img src="https://avatars.githubusercontent.com/u/193830728?v=4&cache=20260804-3" alt="Portrait of Joshua Nwaneli" style="filter:none!important;-webkit-filter:none!important;" />
             <div>
               <strong>Joshua Nwaneli</strong>
               <span>Computer Engineering · Oral Roberts University</span>
