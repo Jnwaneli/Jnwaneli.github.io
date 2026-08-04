@@ -2,19 +2,32 @@ const appearanceFix = document.createElement('style');
 appearanceFix.textContent = `
   html,
   body,
-  body *:not(input):not(textarea):not([contenteditable="true"]) {
+  body * {
     caret-color: transparent !important;
   }
 
   body,
   .site-shell,
-  .intro-screen {
-    -webkit-user-select: none;
-    user-select: none;
+  .intro-screen,
+  main,
+  section,
+  article,
+  div,
+  h1,
+  h2,
+  h3,
+  p,
+  span,
+  strong,
+  small,
+  li {
+    -webkit-user-select: none !important;
+    user-select: none !important;
   }
 
   .profile-card img {
     filter: none !important;
+    -webkit-filter: none !important;
   }
 `;
 document.head.appendChild(appearanceFix);
@@ -78,15 +91,33 @@ menuButton?.addEventListener('click', () => {
 
 navLinks.forEach((link) => link.addEventListener('click', closeMenu));
 
-document.addEventListener('pointerdown', (event) => {
-  if (event.target.closest('a, button, input, textarea, [contenteditable="true"]')) return;
+function clearPageCaret(event) {
+  if (event?.target?.closest?.('input, textarea, [contenteditable="true"]')) return;
 
   const selection = window.getSelection();
-  selection?.removeAllRanges();
+  if (selection && selection.rangeCount) selection.removeAllRanges();
 
-  if (document.activeElement instanceof HTMLElement) {
-    document.activeElement.blur();
+  const activeElement = document.activeElement;
+  if (activeElement instanceof HTMLElement && !activeElement.matches('a, button, input, textarea, [contenteditable="true"]')) {
+    activeElement.blur();
   }
+}
+
+['pointerdown', 'mousedown', 'mouseup', 'click', 'dblclick', 'selectstart'].forEach((eventName) => {
+  document.addEventListener(eventName, (event) => {
+    if (eventName === 'selectstart' && !event.target.closest('input, textarea, [contenteditable="true"]')) {
+      event.preventDefault();
+    }
+    clearPageCaret(event);
+    window.requestAnimationFrame(() => clearPageCaret(event));
+  }, true);
+});
+
+document.addEventListener('selectionchange', () => {
+  const activeElement = document.activeElement;
+  if (activeElement?.matches?.('input, textarea, [contenteditable="true"]')) return;
+  const selection = window.getSelection();
+  if (selection && selection.rangeCount) selection.removeAllRanges();
 });
 
 document.addEventListener('keydown', (event) => {
