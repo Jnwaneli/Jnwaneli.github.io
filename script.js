@@ -29,6 +29,106 @@ appearanceFix.textContent = `
     filter: none !important;
     -webkit-filter: none !important;
   }
+
+  .circuit-background {
+    z-index: 0 !important;
+    opacity: 0.72;
+    mix-blend-mode: screen;
+  }
+
+  .circuit-background svg {
+    filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.12));
+  }
+
+  .circuit-paths path {
+    stroke: rgba(255, 255, 255, 0.18) !important;
+    stroke-dasharray: 22 14 !important;
+    animation-duration: 14s !important;
+  }
+
+  .circuit-nodes circle {
+    fill: rgba(255, 255, 255, 0.52) !important;
+  }
+
+  .site-shell {
+    position: relative;
+    z-index: 1 !important;
+    background: linear-gradient(180deg, rgba(5, 5, 5, 0.78), rgba(5, 5, 5, 0.90));
+  }
+
+  .intro-screen {
+    z-index: 1500 !important;
+  }
+
+  .intro-line {
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+  }
+
+  .intro-char {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(34px) scale(0.94);
+    transform-origin: 50% 100%;
+    animation: intro-letter-build 0.58s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  }
+
+  @keyframes intro-letter-build {
+    0% {
+      opacity: 0;
+      transform: translateY(34px) scale(0.94);
+      filter: blur(5px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+      filter: blur(0);
+    }
+  }
+
+  .project-thumbnail-link {
+    position: relative;
+    display: block;
+    cursor: pointer;
+    outline: none;
+  }
+
+  .project-thumbnail-link::after {
+    position: absolute;
+    right: 0.9rem;
+    bottom: 0.9rem;
+    padding: 0.42rem 0.6rem;
+    border: 1px solid rgba(255, 255, 255, 0.72);
+    background: rgba(0, 0, 0, 0.82);
+    color: #ffffff;
+    content: 'Open repository ↗';
+    font: 500 0.68rem/1.2 "JetBrains Mono", monospace;
+    letter-spacing: 0.04em;
+    opacity: 0;
+    transform: translateY(5px);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    pointer-events: none;
+  }
+
+  .project-thumbnail-link:hover::after,
+  .project-thumbnail-link:focus-visible::after {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .project-thumbnail-link:focus-visible {
+    box-shadow: inset 0 0 0 2px #ffffff;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .intro-char {
+      opacity: 1;
+      transform: none;
+      filter: none;
+      animation: none;
+    }
+  }
 `;
 document.head.appendChild(appearanceFix);
 
@@ -39,6 +139,48 @@ const introScreen = document.querySelector('#intro-screen');
 const enterButton = document.querySelector('#enter-site');
 const body = document.body;
 const introStorageKey = 'jn-portfolio-entered';
+
+function buildLetterIntro() {
+  const lines = document.querySelectorAll('.intro-line');
+  let characterIndex = 0;
+
+  lines.forEach((line, lineIndex) => {
+    const text = line.textContent.trim();
+    line.textContent = '';
+    line.setAttribute('aria-label', text);
+
+    Array.from(text).forEach((character) => {
+      const span = document.createElement('span');
+      span.className = 'intro-char';
+      span.setAttribute('aria-hidden', 'true');
+      span.textContent = character === ' ' ? '\u00a0' : character;
+      span.style.animationDelay = `${260 + characterIndex * 48 + lineIndex * 140}ms`;
+      line.appendChild(span);
+      characterIndex += 1;
+    });
+  });
+}
+
+function linkProjectThumbnails() {
+  document.querySelectorAll('.project-card').forEach((card) => {
+    const repositoryLink = card.querySelector('.repo-link');
+    const media = card.querySelector(':scope > .project-media');
+
+    if (!repositoryLink || !media || media.parentElement?.classList.contains('project-thumbnail-link')) return;
+
+    const projectTitle = card.querySelector('h3')?.textContent?.trim() || 'project';
+    const thumbnailLink = document.createElement('a');
+    thumbnailLink.className = 'project-thumbnail-link';
+    thumbnailLink.href = repositoryLink.href;
+    thumbnailLink.target = '_blank';
+    thumbnailLink.rel = 'noreferrer';
+    thumbnailLink.title = `Open ${projectTitle} repository`;
+    thumbnailLink.setAttribute('aria-label', `Open ${projectTitle} repository in a new tab`);
+
+    media.replaceWith(thumbnailLink);
+    thumbnailLink.appendChild(media);
+  });
+}
 
 function closeMenu() {
   if (!menuButton || !siteNav) return;
@@ -68,6 +210,9 @@ function enterPortfolio({ instant = false } = {}) {
     introScreen.classList.add('is-hidden');
   }, 900);
 }
+
+buildLetterIntro();
+linkProjectThumbnails();
 
 let introAlreadySeen = false;
 try {
